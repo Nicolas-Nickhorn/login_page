@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 100, 0.8);
+        }
+        .dev{
+            float: right;
+            margin-right: 50px;
+        }
+        .dev .dev-background{
+            font-size: 100px;
+            text-decoration: underline;
+            color: rgb(200, 200, 200);
+        }
+
+        /*Inicio Usuario*/
+        .usuario{
+            background-color: black;
+            border-radius: 10px;
+            text-align: center;
+            align-items: center;
+            margin-left: 50px;
+            margin-top: 30px;
+            height: 500px;
+            width: 400px;
+        }
+        .usuario .icon .background-icon{
+            background-color: white;
+            height: 100px;
+            width: 100px;
+            margin-left: 150px;
+            border-radius: 50%;
+            transform: translateY(50%);
+        }
+        .usuario .icon .background-icon ion-icon{
+            text-align: center;
+            margin: 10px;
+            font-size: 80px;
+        }
+        /*Fim Usuario*/
+
+        /*Inicio Dados*/
+        .dados{
+            margin-top: 100px;    
+        }
+        .dados  input{
+            padding: 3px;
+        }
+        ::placeholder{
+            color: black;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .dados  input#email{
+            width: 300px;
+            border-radius: 5px;
+        }
+        .dados input#cemail{
+            width: 300px;
+            border-radius: 5px;
+            margin: 5px;
+            display: none;
+        }
+        .dados  input#senha{
+            width: 300px;
+            border-radius: 5px;
+        }
+        .dados input#csenha{
+            width: 300px;
+            border-radius: 5px;
+            margin: 5px;
+            display: none;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+            position: relative;
+            font-size: 20px;   
+        }
+        .cpf input#cpf{
+            width: 300px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .login{
+            margin-top: 50px;
+        }
+        .login input#login{
+            width: 100px;
+            height: 30px;
+            padding: 2px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            color: black;
+        }
+        .login input#register{
+            color: white;
+            background-color: black;
+            text-decoration: underline;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        /*Inicio Dados*/
+        footer{
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dev">
+        <div class="dev-background">
+            DEV
+        </div>
+    </div>
+    
+    <div class="usuario">
+        <div class="icon">
+            <div class="background-icon">
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+        </div>
+        <div class="dados">
+            <div class="email">
+                <input type="email" name="email" id="email" placeholder="E-MAIL"><br>
+                <input type="email" name="email" id="cemail" placeholder="CONFIRMAR E-MAIL">
+                <p>
+            </div>
+            <div class="senha">
+                <input type="password" name="senha" id="senha" placeholder="SENHA"><br>
+                <input type="password" name="senha" id="csenha" placeholder="CONFIRMAR SENHA"><br>
+                <a href="#" id="forgot">Esqueceu a senha?</a><p>
+            </div>
+            <div class="cpf">
+                <input type="number" name="cpf" id="cpf" placeholder="CPF">
+            </div>
+            <div class="login">
+                <input type="submit" value="Login" id="login"><br>
+                <input type="button" value="Registrar-se" id="register" onclick="mudar()">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        Material para Estudos
+    </footer>
+    
+    <script>
+        function mudar(){     
+            document.getElementById('cemail').style.display = 'inline'
+
+            document.getElementById('csenha').style.display = 'inline'
+
+            document.getElementById('cpf').style.display = 'inline'
+
+            document.getElementById('forgot').innerHTML = ''
+
+            document.getElementById('login').value = 'Cadastrar-se'
+            document.getElementById('login').style.width = '150px'
+
+            document.getElementById('register').value = 'Já Possui Conta?'
+        }
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
